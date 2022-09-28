@@ -24,22 +24,23 @@ function generateComputerChoice(){
 function generateResult(userInput, computerInput) {
     switch (userInput) {
         case 'R': switch (computerInput) {
-                    case 'R': reportTies();
-                    case 'P': reportLoss();
-                    case 'S': reportWins();
+                    case 'R': return reportTies();
+                    case 'P': return reportLoss();
+                    case 'S': return reportWins();
+                    return;
+
                     };
         case 'P': switch (computerInput) {
-                    case 'R': reportWins();
-                    case 'P': reportTies();
-                    case 'S': reportLoss();
+                    case 'R': return reportWins();
+                    case 'P': return reportTies();
+                    case 'S': return reportLoss();
                     };
         case 'S': switch (computerInput) {
-                    case 'R': reportLoss();
-                    case 'P': reportWins();
-                    case 'S': reportTies();
+                    case 'R': return reportLoss();
+                    case 'P': return reportWins();
+                    case 'S': return reportTies();
                     };  
     }
-    return "You win!";
 }
 function reportLoss() {
     losses++;
