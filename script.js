@@ -27,8 +27,6 @@ function generateResult(userInput, computerInput) {
                     case 'R': return reportTies();
                     case 'P': return reportLoss();
                     case 'S': return reportWins();
-                    return;
-
                     };
         case 'P': switch (computerInput) {
                     case 'R': return reportWins();
