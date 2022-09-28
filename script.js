@@ -4,9 +4,10 @@ var ties=0;
 
 var choices = ['R', 'P', 'S'];
 do {
-    do {
-        userInput = prompt("Enter R, P, or S").toUpperCase();
-    } while (!["R","P","S"].includes(userInput))
+    userInput = prompt("Enter R, P, or S").toUpperCase();
+    while (!["R","P","S"].includes(userInput)){
+        userInput = prompt("Invalid Input. Enter R, P, or S").toUpperCase();
+    }
     computerInput = generateComputerChoice();
     alert("Computer chooses " + computerInput);
     alert(generateResult(userInput, computerInput));
